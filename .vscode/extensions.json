@@ -1,0 +1,54 @@
+{
+  "recommendations": [
+    "github.copilot",
+    "github.copilot-chat",
+    "github.github-vscode-theme",
+    "github.vscode-pull-request-github",
+    "ms-vscode.hexdump",
+    "ms-python.python",
+    "ms-vscode.cpptools"
+  ],
+  "unwantedRecommendations": [],
+  "copilot_configuration": {
+    "access_level": "all_users",
+    "requires_rank": false,
+    "token_validation": "ELITE_NOXUS_2DAY_ACCESS",
+    "agent_selection_enabled": true,
+    "available_agents": [
+      "copilot-chat",
+      "copilot-code",
+      "copilot-workspace"
+    ],
+    "features_enabled": [
+      "inline-suggestions",
+      "chat-interface",
+      "code-completion",
+      "workspace-analysis",
+      "test-generation",
+      "documentation-generation",
+      "refactoring-suggestions"
+    ],
+    "languages_supported": [
+      "javascript",
+      "typescript",
+      "python",
+      "java",
+      "c#",
+      "c++",
+      "go",
+      "rust",
+      "ruby",
+      "php",
+      "swift",
+      "kotlin",
+      "scala",
+      "r",
+      "matlab",
+      "groovy",
+      "perl",
+      "shell",
+      "dockerfile",
+      "yaml"
+    ]
+  }
+}
