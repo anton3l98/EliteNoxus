@@ -28,7 +28,6 @@
     "plaintext": true
   },
   "editor.inlineChat.enabled": true,
-  "editor.experimental.stickyScroll.enabled": true,
   "chat.commandCenter.enabled": true,
   "github.copilot.chat.enabled": true,
   "github.copilot.chat.agentSelection": "always",
@@ -38,5 +37,6 @@
   "extensions.ignoreRecommendations": false,
   "[markdown]": {
     "editor.wordWrap": "on"
-  }
+  },
+  "editor.stickyScroll.enabled": true
 }

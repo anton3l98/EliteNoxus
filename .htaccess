@@ -1,0 +1,50 @@
+# EliteNoxus - Apache Configuration
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Base URL
+RewriteBase /
+
+# Force HTTPS (descomenta en producción)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Protect config files
+<FilesMatch "^(config|sql)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protect database files
+<FilesMatch "\.(sql|md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# PHP Settings
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 60
+php_value max_input_time 60
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Directory Index
+DirectoryIndex index.php index.html
+
+# Default Charset
+AddDefaultCharset UTF-8
+
+# Error Documents
+ErrorDocument 403 /error.php?code=403
+ErrorDocument 404 /error.php?code=404
+ErrorDocument 500 /error.php?code=500
+
+# Protect .git folder
+RedirectMatch 404 /\.git
